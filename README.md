@@ -1,59 +1,58 @@
-# 💰 Expense Tracker (CLI)
+# 🎯 Number Guessing Game
 
-A command-line Python app to track daily expenses, categorize spending, and view summaries — all stored in a local CSV file.
+A simple command-line game where you try to guess a random number between 1 and 100 within 7 attempts.
 
 ## Features
-- ➕ Add expenses with date, category, amount, and notes
-- 📋 View all recorded expenses in a table
-- 📊 View a spending summary grouped by category, with total
-- 💾 Data saved in `expenses.csv` (easy to open in Excel too)
+- 🎲 Random number generation between 1 and 100
+- 💡 Hints ("Too high" / "Too low") after each guess
+- 🔢 Tracks number of attempts used
+- 🔁 Option to play again after each round
 
 ## How to Run
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/expense-tracker.git
-   cd expense-tracker
+   git clone https://github.com/your-username/number-guessing-game.git
+   cd number-guessing-game
    ```
 
-2. Run the app:
+2. Run the game:
    ```bash
-   python expense_tracker.py
+   python guessing_game.py
    ```
 
 ## Requirements
-- Python 3.6 or higher (uses only built-in `csv`, `os`, and `datetime` modules)
+- Python 3.6 or higher (uses only the built-in `random` module)
 
 ## Example
 
 ```
-==== EXPENSE TRACKER ====
-1. Add expense
-2. View all expenses
-3. View summary by category
-4. Exit
-==========================
-Choose an option (1-4): 1
-Date (YYYY-MM-DD) [leave blank for today]: 
-Category (e.g. Food, Travel, Bills): Food
-Amount: 250
-Note (optional): Lunch with friends
-Expense added!
-```
+==== NUMBER GUESSING GAME ====
 
-Summary output:
-```
---- Expense Summary ---
-Food           : 250.00
-------------------------------
-Total          : 250.00
+I'm thinking of a number between 1 and 100.
+You have 7 attempts to guess it.
+
+Enter your guess: 50
+Too high!
+
+Attempts left: 6
+
+Enter your guess: 25
+Too low!
+
+Attempts left: 5
+
+Enter your guess: 37
+🎉 Correct! You guessed it in 3 attempts.
+
+Play again? (y/n): n
+Thanks for playing! Goodbye!
 ```
 
 ## Future Improvements
-- Filter expenses by date range or month
-- Add a budget limit with alerts
-- Export summary as a chart (using matplotlib)
-- Build a web version with Flask
+- Add difficulty levels (change range or attempts)
+- Track high scores across sessions
+- Add a GUI version using Tkinter
 
 ## Author
 Prachi
